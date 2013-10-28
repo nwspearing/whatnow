@@ -1,0 +1,40 @@
+<div id="newcontainer">
+
+	<h1> Enter a new Trigger: </h1>
+
+
+<%= form_for  @trigger do |trig| %>
+<p>
+
+<%= trig.label :timepref, "Time" %>
+
+<%= trig.text_field :timepref %>
+
+  <%# trig.time_select :timepref, :placeholder => 1200 %>
+
+</p>
+
+
+
+
+
+
+<p>
+
+<%= trig.label :urlpref, "Desired URL" %>
+
+<%= trig.text_field :urlpref %>
+<%# trig.text_field :urlpref, :value => "http://www."  %>
+
+</p>
+
+
+<p>
+<%= trig.submit %>
+</p>
+
+
+<%end%>
+
+
+</div>

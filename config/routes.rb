@@ -1,4 +1,35 @@
 Whatnow::Application.routes.draw do
+
+ root to: 'triggers#home'
+
+  get 'triggers' => 'triggers#index'
+  get 'triggers/maindisplay' => 'triggers#maindisplay'
+   get 'triggers/new' => 'triggers#new'    #adding new info...this must be before show
+
+   get 'users/new' => 'users#new'
+
+   get 'authentications/new' => 'authentications#new'
+
+  get 'triggers/:id' => 'triggers#show'   #showing one 
+
+  # get 'tvtitles/edit/:id' => 'tvtitles#edit' 
+
+  post 'triggers' => 'triggers#create'   #creating new language
+
+  post 'authentications' => 'authentications#create'
+
+  post 'users' => 'users#create'
+
+  # delete 'tvtitles' => 'tvtitles#destroy'
+   delete 'triggers/:id' => 'triggers#destroy'
+
+  # delete 'authentications' => 'authentications#destroy'
+  delete 'authentications/:id' => 'authentications#destroy'
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

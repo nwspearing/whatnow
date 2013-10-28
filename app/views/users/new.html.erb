@@ -1,0 +1,51 @@
+
+
+<!-- THIS IS NEW VIEW FOR USER CLASS -->
+
+
+
+
+	<h1> Enter an email and password: </h1>
+
+
+<%= form_for  @user do |usr| %>
+<p>
+
+<%= usr.label :email, "Email" %>
+
+<%= usr.text_field :email %>
+
+</p>
+
+
+
+<p>
+
+<%= usr.label :password, "Password" %>
+
+<%= usr.text_field :password %>
+
+</p>
+
+
+<p>
+
+<%= usr.label :password_confirmation, "Password Confirmation" %>
+
+<%= usr.text_field :password_confirmation %>
+
+</p>
+
+
+
+<p>
+<%= usr.submit %>
+</p>
+
+
+<%end%>
+
+<hr/>
+
+User id: <%= session[:user_id] %>
+

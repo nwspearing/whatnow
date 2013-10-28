@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Trigger.destroy_all
+
+# Tvtitle.create([
+
+# 	{name: '', t_episode: ''}
+# 	])
+
+
+Trigger.create([
+	{timepref: "05:00", urlpref: 'http://www.weather.com'},
+	{timepref: "06:00", urlpref: 'http://www.traffic.com'},
+	{timepref: "12:00", urlpref: 'http://www.foodspotting.com'},
+	{timepref: "17:00", urlpref: 'http://www.traffic.com'}
+	])
+
+

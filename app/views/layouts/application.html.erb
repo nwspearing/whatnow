@@ -5,10 +5,64 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+
+<!-- THIS IS THE TIME PICKER -->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="css/bootstrap.min.css" />
+<link type="text/css" href="css/bootstrap-timepicker.min.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script> -->
+
+
 </head>
 <body>
+	
 
+
+
+	<nav> 
+
+  	<ul class="nav nav-tabs">
+  		<!-- <li class="/"><a href="#">Home</a></li> -->
+	  	<li><a href="/">Home</a></li>
+	  	<li><a href="/triggers">List</a></li>
+	  	<li><a href="/triggers/new">New</a></li>
+	  	<li><a href="/triggers/maindisplay">MainDisplay</a></li>
+
+	</ul>
+
+<% if current_user %>
+ <%# button_to "logout", "/authentications", method: "delete" %>
+ <%= button_to "logout", "/authentications/:id", method: "delete" %>
+ <!-- this would need routes.rb to be changed too to use id -->
+<% end %>
+	
+<%# button_to "X", { action: "destroy", id: user.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %>
+
+
+	</nav>
+
+<div id="container">
 <%= yield %>
+</div>
 
+
+User id: <%= session[:user_id] %>
+
+<%# trigger.time.to_s  %>
+<%# trigger.url.to_s  %>
+
+<%#= tvtitle[0].t_episode %>
+
+
+
+<footer>Here's a footer!</footer>
 </body>
 </html>
+
+
+
+
+

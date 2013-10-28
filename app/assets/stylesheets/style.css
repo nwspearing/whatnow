@@ -1,0 +1,37 @@
+
+body {
+
+	background-color: grey;
+	font-family: helvetica;
+}
+
+
+#container {
+
+	background-color: #eee;
+	width: 800px;
+	margin: 0 auto;
+
+}
+
+
+h1 {
+
+	color: blue;
+
+}
+
+
+table { 
+
+	color: #ff3366;
+
+}
+
+
+th {
+
+color: green;
+
+
+}

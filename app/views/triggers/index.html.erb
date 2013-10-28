@@ -1,0 +1,70 @@
+<div id="indexcontainer">
+
+THIS IS GOING TO BE MY SETTINGS PAGE
+
+<h1> List of Triggers </h1>
+
+<table>
+	<tr>
+		<th>Time to Trigger URL</th>
+		<th>URL Preference</th>
+
+	</tr>
+
+
+	<% @triggers.each do |trig|  %>
+		<tr>
+			<td><%= trig.timepref %></td>
+			<td><%= trig.urlpref %></td>
+			<th></th>
+			
+			<td> <%= button_to "X", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
+
+		</tr>
+	<% end %>
+
+</table>
+
+<%= @hello %>
+
+
+
+
+
+<iframe id="iframeID" width="960px" height="300px"></iframe> 
+
+
+
+
+
+
+
+<%= javascript_tag do %>
+
+
+var variable = "<%= @triggers[0].urlpref %>";
+alert(variable);
+document.getElementById("iframeID").src=variable;
+
+setTimeout(function() { location.href=location.href;}, 20000 );
+
+
+
+<% end %>
+
+
+
+<!-- <iframe height="15%" marginheight="0px" marginwidth="0px" scrolling="no" src="menuBanner.jsp" style="border:0; padding: 0px; position:absolute;" width="960px">
+</iframe>
+<div><button data-dojo-type="dijit.form.Button" value="Reload" id="reload"  onclick="reload();">Reload</button></div> -->
+
+
+<!-- onload = "loadUrl(http://<%# @tvtitles[0].t_episode %>)"  -->
+
+
+
+
+
+
+
+</div>

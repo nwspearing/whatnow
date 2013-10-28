@@ -29,6 +29,8 @@ development:
         # retry_interval: 1
   # Configure Mongoid specific options. (optional)
   options:
+  # Mongoid.raise_not_found_error: false
+
     # Enable the identity map, needed for eager loading. (default: false)
     # identity_map_enabled: false
 
@@ -74,3 +76,10 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
