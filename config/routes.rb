@@ -1,30 +1,30 @@
 Whatnow::Application.routes.draw do
 
+
+  resources :users do
+    resources :triggers do
+    end
+  end
+
+resources :authentications
+
+
+resources :sessions, only: [:new, :create, :destroy]
+# match '/triggers', to: 'triggers#index', via 'get'
+# match '/triggers/maindisplay', to: 'triggers#maindisplay', via 'get'
+# match '/triggers/new', to: 'triggers#new', via 'get'
+# match '/users/new', to: 'users#new', via 'get'
+# match '/authentications/new', to: 'authentications#new', via 'get'
+# match '/triggers/:id', to: 'triggers#show', via 'get'
+# match '/triggers', to: 'triggers#create', via 'post'
+# match '/authentications', to: 'authentications#create', via 'post'
+# match '/users', to: 'users#create', via 'post'
+# match '/triggers/:id', to: 'triggers#destroy', via 'delete'
+# match '/authentications/:id', to: 'authentications#destroy', via 'delete'
+
  root to: 'triggers#home'
 
-  get 'triggers' => 'triggers#index'
-  get 'triggers/maindisplay' => 'triggers#maindisplay'
-   get 'triggers/new' => 'triggers#new'    #adding new info...this must be before show
 
-   get 'users/new' => 'users#new'
-
-   get 'authentications/new' => 'authentications#new'
-
-  get 'triggers/:id' => 'triggers#show'   #showing one 
-
-  # get 'tvtitles/edit/:id' => 'tvtitles#edit' 
-
-  post 'triggers' => 'triggers#create'   #creating new language
-
-  post 'authentications' => 'authentications#create'
-
-  post 'users' => 'users#create'
-
-  # delete 'tvtitles' => 'tvtitles#destroy'
-   delete 'triggers/:id' => 'triggers#destroy'
-
-  # delete 'authentications' => 'authentications#destroy'
-  delete 'authentications/:id' => 'authentications#destroy'
 
 
 

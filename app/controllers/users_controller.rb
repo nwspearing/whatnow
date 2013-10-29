@@ -18,12 +18,12 @@ class UsersController < ApplicationController
 	end
 
 
-	# def show
-	# 	# parems[:id]
-	# 	@tvtitle =Tvtitle.find(params[:id])
-	# 	# @times = location.times             this is a sample for multiple variables
+	def show
+		# parems[:id]
+		@trigger =Trigger.find(params[:id])
+		# @times = location.times             this is a sample for multiple variables
 		
-	# end
+	end
 
 
 
@@ -34,7 +34,8 @@ class UsersController < ApplicationController
 		@user = User.create(params[:user].permit(:email, :password, :password_confirmation))
 		# redirect_to :action => "new"
 		# redirect_to :action => "tvtitles#new"
-		redirect_to triggers_url
+		redirect_to user_triggers_url
+		# redirect_to triggers_url
 		# redirect_to tvtitles_url
 		# redirect_to :action => "new", :id =>@user._id
 		# redirect_to users_url

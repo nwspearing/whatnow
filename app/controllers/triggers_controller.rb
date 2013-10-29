@@ -35,7 +35,8 @@ class TriggersController < ApplicationController
 
 	def destroy
 		Trigger.find(params[:id]).destroy
-		redirect_to triggers_url
+		# redirect_to triggers_url
+		redirect_to user_triggers_url
 	end	
 
 

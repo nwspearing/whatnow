@@ -7,8 +7,9 @@ class Trigger
 	field :timepref, type: String
 	field :urlpref, type: String
 
-	belongs_to :user
-
+	# belongs_to :user
+	# embedded_in :user, :inverse_of => :triggers
+	embedded_in :user
 
 # def time_check
 # TIME1 = Time.new
