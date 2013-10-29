@@ -3,6 +3,7 @@ class Trigger
 	# include Mongoid::Document::Attributes::Dynamic
 
 	# field :timepref, type: Integer
+	# field :timepref, type: Time
 	field :timepref, type: String
 	field :urlpref, type: String
 

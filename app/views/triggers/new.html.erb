@@ -8,9 +8,11 @@
 
 <%= trig.label :timepref, "Time" %>
 
-<%= trig.text_field :timepref %>
+<%= trig.text_field :timepref, :placeholder => "14:00" %>
 
-  <%# trig.time_select :timepref, :placeholder => 1200 %>
+<%# trig.time_select :timepref %>
+
+  <%# trig.time_select :timepref, :placeholder => 12:00 %>
 
 </p>
 
@@ -23,8 +25,8 @@
 
 <%= trig.label :urlpref, "Desired URL" %>
 
-<%= trig.text_field :urlpref %>
-<%# trig.text_field :urlpref, :value => "http://www."  %>
+<%# trig.text_field :urlpref %>
+<%= trig.text_field :urlpref, :value => "http://www."  %>
 
 </p>
 
