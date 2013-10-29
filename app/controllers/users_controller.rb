@@ -34,7 +34,8 @@ class UsersController < ApplicationController
 		@user = User.create(params[:user].permit(:email, :password, :password_confirmation))
 		# redirect_to :action => "new"
 		# redirect_to :action => "tvtitles#new"
-		redirect_to user_triggers_url
+		# redirect_to user_triggers_url
+		redirect_to root_url
 		# redirect_to triggers_url
 		# redirect_to tvtitles_url
 		# redirect_to :action => "new", :id =>@user._id

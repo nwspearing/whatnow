@@ -19,11 +19,13 @@ Trigger.destroy_all
 
 
 
-# User.create([{email: 'Jimmy@me.com', salt: "$2a$10$oKec2vnpSHycUT/f5TzNhO", hashed_password: "$2a$10$oKec2vnpSHycUT/f5TzNhOgnsE1UvOVk0.PN8.IM7nzEHYH1W510e"}])
+User.create([{email: 'Ji@me.com', salt: "$2a$10$oKec2vnpSHycUT/f5TzNhO", hashed_password: "$2a$10$oKec2vnpSHycUT/f5TzNhOgnsE1UvOVk0.PN8.IM7nzEHYH1W510e"}])
 
 u = User.first
 
 u.triggers.create(timepref: "05:00", urlpref: 'http://www.weather.com')
+
+# User.first.create(timepref: "05:00", urlpref: 'http://www.weather.com')
 
 # u.triggers.create([
 # 	{timepref: "05:00", urlpref: 'http://www.weather.com'},

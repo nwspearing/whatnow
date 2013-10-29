@@ -1,11 +1,16 @@
 class TriggersController < ApplicationController
+
+	# @user = current_user
+
 	def index
 		@triggers = Trigger.all
+		# current_user.triggers = Trigger.all
 		@hello = "Greetings!"
 		#nothing here!
 	end
 
 	def maindisplay
+		# current_user.triggers = Trigger.all
 		@triggers = Trigger.all
 	end
 

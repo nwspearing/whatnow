@@ -12,7 +12,7 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 	</tr>
 
 
-	<% @triggers.each do |trig|  %>
+	<% current_user.triggers.each do |trig|  %>
 		<tr>
 			<td><%= trig.timepref %></td>
 			<td><%= trig.urlpref %></td>
@@ -41,8 +41,10 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 
 <%= javascript_tag do %>
 
+<!-- var time_variable = <%# TIME.now  %> -->
 
-var variable = "<%= @triggers[0].urlpref %>";
+
+var variable = "<%= current_user.triggers[0].urlpref %>";
 alert(variable);
 document.getElementById("iframeID").src=variable;
 
