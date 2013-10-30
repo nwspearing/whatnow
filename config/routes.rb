@@ -10,6 +10,10 @@ resources :authentications
 
 
 resources :sessions, only: [:new, :create, :destroy]
+
+get 'triggers/maindisplay' => 'triggers#maindisplay'
+# delete 'triggers/maindisplay/:id' => 'triggers/maindisplay#destroy'
+
 # match '/triggers', to: 'triggers#index', via 'get'
 # match '/triggers/maindisplay', to: 'triggers#maindisplay', via 'get'
 # match '/triggers/new', to: 'triggers#new', via 'get'

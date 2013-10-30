@@ -7,6 +7,7 @@ class TriggersController < ApplicationController
 		# @triggers= Trigger.all
 		@triggers = current_user.triggers
 #		@hello = "Greetings!"
+		# @af_avg = Score.where(:test_name => "AFQT").avg(:test_score)
 	end
 
 	def maindisplay
@@ -47,6 +48,16 @@ class TriggersController < ApplicationController
 		redirect_to @user
 
 	end
+
+
+# def edit
+# end
+
+# def update
+# 	end
+
+
+
 
 	def destroy
 		Trigger.find(params[:id]).destroy

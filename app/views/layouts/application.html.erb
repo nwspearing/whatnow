@@ -36,9 +36,9 @@
 	  	<% if current_user %>
 	  	<li><a href="/users/<%=current_user.id %>/triggers">List</a></li>
 	  	<!-- <li><a href="users/<%#current_user.id %>/users/show">New</a></li> -->
-	  	<li><%= link_to "New2", new_user_trigger_url(current_user) %></li>
+	  	<li><%= link_to "New", new_user_trigger_url(current_user) %></li>
 <!-- 	  	<li><a href="../../users/<%# current_user.id %>/triggers/new">New</a></li> -->
-	  	<li><a href="users/<%=current_user.id %>/triggers/maindisplay">MainDisplay</a></li>
+	  	<li><a href="/triggers/maindisplay">MainDisplay</a></li>
 		<% end %>
 
 	</ul>

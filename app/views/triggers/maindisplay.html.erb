@@ -1,8 +1,15 @@
-<div id="indexcontainer">
+<!-- <div id="indexcontainer"> -->
 
-THIS IS GOING TO BE MY SETTINGS PAGE
+THIS IS GOING TO BE MY MAIN DISPLAY PAGE
 
-<h1> List of Triggers </h1>
+<!-- <br/>
+
+This is the scores average :  <%# @af_avg %>
+
+<br/> -->
+
+
+<!-- <h1> List of Triggers </h1>
 
 <table>
 	<tr>
@@ -12,26 +19,24 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 	</tr>
 
 
-	<% current_user.triggers.each do |trig|  %>
+	<%# @triggers.each do |trig|  %>
 		<tr>
-			<td><%= trig.timepref %></td>
-			<td><%= trig.urlpref %></td>
+			<td><%# trig.timepref %></td>
+			<td><%# trig.urlpref %></td>
 			<th></th>
 			
-			<td> <%= button_to "X", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
+			<td> <%# button_to "X", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
 
 		</tr>
-	<% end %>
+	<%# end %>
 
-</table>
-
-<%= @hello %>
+</table> -->
 
 
 
 
 
-<iframe id="iframeID" width="960px" height="300px"></iframe> 
+<iframe id="iframeID" width="960px" height="5000px"></iframe> 
 
 
 
@@ -40,8 +45,6 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 
 
 <%= javascript_tag do %>
-
-<!-- var time_variable = <%# TIME.now  %> -->
 
 
 var variable = "<%= current_user.triggers[0].urlpref %>";
@@ -69,4 +72,4 @@ setTimeout(function() { location.href=location.href;}, 20000 );
 
 
 
-</div>
+<!-- </div> -->

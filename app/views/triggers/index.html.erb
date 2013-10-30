@@ -2,6 +2,13 @@
 
 THIS IS GOING TO BE MY SETTINGS PAGE
 
+<!-- <br/>
+
+This is the scores average :  <%# @af_avg %>
+
+<br/> -->
+
+
 <h1> List of Triggers </h1>
 
 <table>
@@ -29,7 +36,7 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 
 
 
-<iframe id="iframeID" width="960px" height="300px"></iframe> 
+<!-- <iframe id="iframeID" width="960px" height="300px"></iframe>  -->
 
 
 
@@ -37,18 +44,18 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 
 
 
-<%= javascript_tag do %>
+<%# javascript_tag do %>
 
 
-var variable = "<%= current_user.triggers[0].urlpref %>";
+<!-- var variable = "<%# current_user.triggers[0].urlpref %>";
 alert(variable);
 document.getElementById("iframeID").src=variable;
 
-setTimeout(function() { location.href=location.href;}, 20000 );
+setTimeout(function() { location.href=location.href;}, 20000 ); -->
 
 
 
-<% end %>
+<%# end %>
 
 
 
