@@ -3,26 +3,29 @@ class TriggersController < ApplicationController
 	# @user = current_user
 
 	def index
-		@triggers = Trigger.all
-		# current_user.triggers = Trigger.all
-		@hello = "Greetings!"
-		#nothing here!
+		# @User.triggers = User.trigger.all
+		# @triggers= Trigger.all
+		@triggers = current_user.triggers
+#		@hello = "Greetings!"
 	end
 
 	def maindisplay
+		@triggers = current_user.triggers
 		# current_user.triggers = Trigger.all
-		@triggers = Trigger.all
+		# @User.triggers = User.trigger.all
+		# @triggers = Trigger.all
 	end
 
 
 	def new
-		@trigger = Trigger.new
+		@user = User.find(params[:user_id])
+		@trigger = @user.triggers.new
 	end
 
 
 	def show
-		# parems[:id]
 		@trigger =Trigger.find(params[:id])
+
 		# @times = location.times             this is a sample for multiple variables
 		
 	end
@@ -32,9 +35,16 @@ class TriggersController < ApplicationController
 
 		# this is coming from the post (button)
 
-		@trigger = Trigger.create(params[:trigger].permit(:timepref, :urlpref))
+		# @user = session[:user_id]
+
+		@user = User.find(params[:user_id])
+		@trigger = @user.triggers.create(params[:trigger].permit(:timepref, :urlpref))
+
+		# @User.trigger = Trigger.create(params[:trigger].permit(:timepref, :urlpref))
 		# redirect_to tvtitles_url
-		redirect_to :action => "show", :id =>@trigger._id
+		# redirect_to :action => "show", :id =>@trigger._id
+
+		redirect_to @user
 
 	end
 

@@ -27,12 +27,17 @@
   	<ul class="nav nav-tabs">
   		<!-- <li class="/"><a href="#">Home</a></li> -->
 	  	<li><a href="/">Home</a></li>
+
+	  	<% if !current_user %>
 		<li><a href="/authentications/new">Login</a></li>
 		<li><a href="/users/new">Join</a></li>
+		<% end %>
 
 	  	<% if current_user %>
-	  	<li><a href="users/<%=current_user.id %>/triggers">List</a></li>
-	  	<li><a href="triggers/new">New</a></li>
+	  	<li><a href="/users/<%=current_user.id %>/triggers">List</a></li>
+	  	<!-- <li><a href="users/<%#current_user.id %>/users/show">New</a></li> -->
+	  	<li><%= link_to "New2", new_user_trigger_url(current_user) %></li>
+<!-- 	  	<li><a href="../../users/<%# current_user.id %>/triggers/new">New</a></li> -->
 	  	<li><a href="users/<%=current_user.id %>/triggers/maindisplay">MainDisplay</a></li>
 		<% end %>
 

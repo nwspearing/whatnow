@@ -36,6 +36,7 @@ def create
 		# render :create
 		# flash[:notice] = "Unable to log you in. Please try again."
 		redirect_to authentications_new_url
+		# redirect_to root_url
 	end
 end
 
@@ -44,7 +45,8 @@ def destroy
 	session[:user_id] = nil
 	# redirect_to root_url,
 	# redirect_to authentications_url,
-	redirect_to authentications_new_url,
+	# redirect_to authentications_new_url,
+	redirect_to root_url,
 	  notice: "You signed out."
 end
 

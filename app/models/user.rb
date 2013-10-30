@@ -9,8 +9,8 @@ class User
 	field :salt, type: String
 	field :hashed_password, type: String
 
-	# has_many :triggers
-	embeds_many :triggers
+	has_many :triggers
+	# embeds_many :triggers
 
 
 before_save :hash_password

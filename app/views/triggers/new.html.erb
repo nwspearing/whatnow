@@ -3,7 +3,7 @@
 	<h1> Enter a new Trigger: </h1>
 
 
-<%= form_for current_user.trigger do |trig| %>
+<%= form_for [@user, @trigger] do |trig| %>
 <p>
 
 <%= trig.label :timepref, "Time" %>

@@ -12,7 +12,7 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 	</tr>
 
 
-	<% current_user.triggers.each do |trig|  %>
+	<% @triggers.each do |trig|  %>
 		<tr>
 			<td><%= trig.timepref %></td>
 			<td><%= trig.urlpref %></td>
@@ -24,8 +24,6 @@ THIS IS GOING TO BE MY SETTINGS PAGE
 	<% end %>
 
 </table>
-
-<%= @hello %>
 
 
 

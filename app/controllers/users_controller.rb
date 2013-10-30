@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
 	def show
 		# parems[:id]
-		@trigger =Trigger.find(params[:id])
+		@user =User.find(params[:id])
 		# @times = location.times             this is a sample for multiple variables
 		
 	end
