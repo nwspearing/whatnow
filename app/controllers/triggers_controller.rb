@@ -56,6 +56,19 @@ class TriggersController < ApplicationController
 # def update
 # 	end
 
+	def edit
+		@user = User.find(params[:user_id])
+		@trigger = @user.triggers.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:user_id])
+		@trigger = @user.triggers.find(params[:id])
+		@trigger.update(submit_params)
+
+		redirect_to @index
+	end
+
 
 
 
@@ -64,6 +77,15 @@ class TriggersController < ApplicationController
 		# redirect_to triggers_url
 		redirect_to user_triggers_url
 	end	
+
+
+	private
+
+	def submit_params
+		params[:trigger]
+		.permit(:typepref, :urlpref)
+	end
+
 
 
 end

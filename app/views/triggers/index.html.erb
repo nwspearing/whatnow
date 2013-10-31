@@ -27,7 +27,9 @@ This is the scores average :  <%# @af_avg %>
 			<td><%= trig.urlpref %></td>
 			<th></th>
 			
-			<td> <%= button_to "X", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
+			<td> <%= button_to "Edit", { action: "edit", id: trig.id}, {method: :get, :class => "button"} %> </td>
+			<td> <%# button_to "E", { action: "update", id: trig.id}, {method: :edit, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
+			<td> <%= button_to "Delete", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
 
 		</tr>
 	<% end %>
