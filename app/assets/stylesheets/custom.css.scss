@@ -3,12 +3,13 @@
 /*@import 'bootstrap-responsive';*/
 /*@import 'jquery';*/
 
-$maincolor: #ff3366;
-
+/*$maincolor: #ff3366;*/
+/*$maincolor: white;*/
 
 body {
 
-	background-color: $maincolor;
+	/*background-color: $maincolor;*/
+	/*background-color: blue;*/
 	font-family: helvetica;
 }
 
@@ -19,7 +20,9 @@ body {
 
 #container {
 
-	background-color: #eee;
+	
+	/*background-color: #eee;*/
+	background-color: black;
 	width: 800px;
 	margin: 0 auto;
 
@@ -41,7 +44,9 @@ body {
 #indexcontainer {
 
 	margin: 20px;
-	background-color: yellow;
+	/*background-color: yellow;*/
+	background-color: light gray;
+
 
 	h1 {
 
@@ -59,7 +64,7 @@ body {
 
 	th {
 
-	color: green;
+	color: black;
 
 
 	}

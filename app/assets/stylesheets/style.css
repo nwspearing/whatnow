@@ -1,7 +1,8 @@
 
 body {
 
-	background-color: grey;
+	background-image: url(image-path('chrystal_ball_with_hands.jpeg'));
+	/*background-color: grey;*/
 	font-family: helvetica;
 }
 
@@ -9,6 +10,8 @@ body {
 #container {
 
 	background-color: #eee;
+	/*background-color: white;*/
+	
 	width: 800px;
 	margin: 0 auto;
 
@@ -24,7 +27,7 @@ h1 {
 
 table { 
 
-	color: #ff3366;
+	color: black;
 
 }
 
