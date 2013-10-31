@@ -25,7 +25,8 @@ def create
 	if user != nil
 		if user.authenticate(params[:user][:password]) 
 		session[:user_id] = user.id
-		redirect_to root_url
+		# redirect_to root_url
+		redirect_to triggers_maindisplay_url
 	    end
 	else
 		# flash.alert = "Unable to log you in.  Please try again."
