@@ -40,15 +40,18 @@
 	  	<li><%= link_to "New Triggers", new_user_trigger_url(current_user) %></li>
 <!-- 	  	<li><a href="../../users/<%# current_user.id %>/triggers/new">New</a></li> -->
 	  	<li><a href="/triggers/maindisplay">Main Display</a></li>
+
+		<li><%= link_to "Logout", "/authentications/:id", method: "delete" %></li>
+
 		<% end %>
 
 	</ul>
 
-<% if current_user %>
+<%# if current_user %>
  <%# button_to "logout", "/authentications", method: "delete" %>
- <%= button_to "logout", "/authentications/:id", method: "delete" %>
+ <%# button_to "logout", "/authentications/:id", method: "delete" %>
  <!-- this would need routes.rb to be changed too to use id -->
-<% end %>
+<%# end %>
 	
 <%# button_to "X", { action: "destroy", id: user.id}, {method: :delete, data:{confirm: "Are you damned sure???"}, :class => "button"} %>
 
