@@ -45,7 +45,8 @@ class TriggersController < ApplicationController
 		# redirect_to tvtitles_url
 		# redirect_to :action => "show", :id =>@trigger._id
 
-		redirect_to @user
+		# redirect_to @user
+		redirect_to user_triggers_url
 
 	end
 
@@ -66,7 +67,7 @@ class TriggersController < ApplicationController
 		@trigger = @user.triggers.find(params[:id])
 		@trigger.update(submit_params)
 
-		redirect_to @index
+		redirect_to user_triggers_url
 	end
 
 

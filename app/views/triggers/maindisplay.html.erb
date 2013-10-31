@@ -47,9 +47,11 @@ This is the scores average :  <%# @af_avg %>
 <%= javascript_tag do %>
 
 
-var variable = "<%= current_user.triggers[0].urlpref %>";
-alert(variable);
-document.getElementById("iframeID").src=variable;
+
+
+var current_trigger = "<%= current_user.triggers[2].urlpref %>";
+alert(current_trigger);
+document.getElementById("iframeID").src=current_trigger;
 
 setTimeout(function() { location.href=location.href;}, 20000 );
 
