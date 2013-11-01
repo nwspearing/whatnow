@@ -1,0 +1,34 @@
+<%= form_for [@user, @trigger] do |trig| %>
+<p>
+
+<%= trig.label :timepref, "Time" %>
+
+<%= trig.text_field :timepref, :placeholder => "14:00" %>
+
+<%# trig.time_select :timepref %>
+
+  <%# trig.time_select :timepref, :placeholder => 12:00 %>
+
+</p>
+
+
+
+
+
+
+<p>
+
+<%= trig.label :urlpref, "Desired URL" %>
+
+<%# trig.text_field :urlpref %>
+<%= trig.text_field :urlpref, :value => "http://www."  %>
+
+</p>
+
+
+<p>
+<%= trig.submit %>
+</p>
+
+
+<%end%>

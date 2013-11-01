@@ -12,8 +12,6 @@ class User
 	has_many :triggers
 	# embeds_many :triggers
 
-	has_many :scores
-
 
 before_save :hash_password
 validates :email, presence: true

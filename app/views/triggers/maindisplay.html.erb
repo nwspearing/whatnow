@@ -34,7 +34,7 @@ This is the scores average :  <%# @af_avg %>
 
 
 
-
+<br/>
 
 <iframe id="iframeID" width="960px" height="5000px"></iframe> 
 
@@ -48,12 +48,11 @@ This is the scores average :  <%# @af_avg %>
 
 
 
-
-var current_trigger = "<%= current_user.triggers[2].urlpref %>";
+var current_trigger = "<%= current_user.triggers[0].urlpref %>";
 alert(current_trigger);
 document.getElementById("iframeID").src=current_trigger;
 
-setTimeout(function() { location.href=location.href;}, 20000 );
+setTimeout(function() { location.href=location.href;}, 60000 );
 
 
 
