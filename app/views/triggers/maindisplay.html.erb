@@ -47,21 +47,19 @@ This is the scores average :  <%# @af_avg %>
 
 <%= javascript_tag do %>
 
+	<% @triggers.each do |t| %>
 
+		var current_trigger = "<%= t.urlpref %>"
 
-<%# @triggers.each do |t| %>
+		<!-- var current_trigger = "<%# current_user.triggers[0].urlpref %>"; -->
 
-<!-- var current_trigger = "<%# t.urlpref %>" -->
+		document.getElementById("iframeID").src=current_trigger;
 
-var current_trigger = "<%= current_user.triggers[0].urlpref %>";
+		setTimeout(function() { location.href=location.href;}, 30000 );
 
-document.getElementById("iframeID").src=current_trigger;
-
-setTimeout(function() { location.href=location.href;}, 60000 );
+	<% end %>
 
 <% end %>
-
-<%# end %>
 
 
 
