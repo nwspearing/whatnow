@@ -1,4 +1,4 @@
-<!-- <div id="indexcontainer"> -->
+<div id="indexcontainer">
 
 <!-- THIS IS GOING TO BE MY MAIN DISPLAY PAGE -->
 
@@ -34,6 +34,7 @@ This is the scores average :  <%# @af_avg %>
 
 
 
+
 <br/>
 
 <iframe id="iframeID" width="960px" height="5000px"></iframe> 
@@ -48,15 +49,19 @@ This is the scores average :  <%# @af_avg %>
 
 
 
+<%# @triggers.each do |t| %>
+
+<!-- var current_trigger = "<%# t.urlpref %>" -->
+
 var current_trigger = "<%= current_user.triggers[0].urlpref %>";
-alert(current_trigger);
+
 document.getElementById("iframeID").src=current_trigger;
 
 setTimeout(function() { location.href=location.href;}, 60000 );
 
-
-
 <% end %>
+
+<%# end %>
 
 
 
@@ -69,8 +74,4 @@ setTimeout(function() { location.href=location.href;}, 60000 );
 
 
 
-
-
-
-
-<!-- </div> -->
+</div>

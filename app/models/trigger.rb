@@ -6,8 +6,9 @@ class Trigger
 	# field :timepref, type: Time
 	field :timepref, type: String
 	field :urlpref, type: String
+	field :tripped, type: Boolean
+
 	
-	# field :tripped, type: Boolean
 
 	belongs_to :user
 	# embedded_in :user, :inverse_of => :triggers

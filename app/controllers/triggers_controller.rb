@@ -11,7 +11,17 @@ class TriggersController < ApplicationController
 	end
 
 	def maindisplay
+		# timetestnow = Time.now
+		# hourtime = time.hour
+		# mintime = time.min
+		# htime = hourtime_to_s
+		# mtime = mintime_to_s
 		@triggers = current_user.triggers
+		# timetestnow = htime + ":" + mtime
+		# @tt = timetestnow
+
+		# @triggers = current_user.triggers.where(:timepref.lte => timetestnow && :triggered == false)
+		
 		# current_user.triggers = Trigger.all
 		# @User.triggers = User.trigger.all
 		# @triggers = Trigger.all
