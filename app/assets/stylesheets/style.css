@@ -1,9 +1,12 @@
 
 body {
 
-	background-image: url('chrystal_ball_with_hands.jpeg');
+	background-image: url('screens.jpg');
+	background-size: contain;
+	/*background-image: url('bigpuzzle.jpg');*/
+	/*background-image: url('chrystal_ball_with_hands.jpeg');*/
 	/*background-size: contain;*/
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;*/
 	/*background-image: url(image-path('chrystal_ball_with_hands.jpeg'));*/
 	/*background-color: grey;*/
 	font-family: helvetica, sans-serif;
@@ -12,12 +15,18 @@ body {
 
 #container {
 
+	/*background-image: url('screens.jpg');*/
+	/*background-image: url('chrystal_ball_with_hands.jpeg');*/
+	background-size: contain;
+	/*opacity: .9;*/
 	/*background-color: #eee;*/
 	/*background-color: white;*/
 	background-color:rgba(255,255,255,0.9);
 	width: 500px;
 	margin: 0 auto;
 	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
 
 }
 
@@ -32,6 +41,10 @@ h1 {
 
 h3, h4 {
 	font-family: Prata, Helvetica, 'Doppio One', sans-serif;
+}
+
+h3 {
+	font-weight: 500;
 }
 
 table { 
