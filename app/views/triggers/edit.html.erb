@@ -1,14 +1,17 @@
-<div id="newcontainer">
+<div id="container">
 
-	<h1> Edit your Trigger: </h1>
+<!-- <div id="newcontainer"> -->
+
+	<h2> Edit your Trigger: </h2>
 
 <%= form_for [@user, @trigger] do |trig| %>
 <p>
 
 <%= trig.label :timepref, "Time" %>
 
-<%= trig.text_field :timepref, :placeholder => "14:00" %>
-
+<%# trig.text_field :timepref, :placeholder => "14:00" %>
+<%# trig.text_field :timepref, :value => "12:00" %>
+<%= trig.text_field :timepref %>
 <%# trig.time_select :timepref %>
 
   <%# trig.time_select :timepref, :placeholder => 12:00 %>
@@ -25,8 +28,8 @@
 <%= trig.label :urlpref, "Desired URL" %>
 
 <%# trig.text_field :urlpref %>
-<%= trig.text_field :urlpref, :value => "http://www."  %>
-
+<%# trig.text_field :urlpref, :value => "http://www."  %>
+<%= trig.text_field :urlpref %>
 </p>
 
 
@@ -37,5 +40,7 @@
 
 <%end%>
 
+
+<!-- </div> -->
 
 </div>

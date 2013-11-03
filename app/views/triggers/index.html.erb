@@ -1,4 +1,6 @@
-<div id="indexcontainer">
+<div id="container">
+
+<!-- <div id="indexcontainer"> -->
 
 <!-- THIS IS GOING TO BE MY SETTINGS PAGE -->
 
@@ -9,14 +11,14 @@ This is the scores average :  <%# @af_avg %>
 <br/> -->
 
 
-<h1> Settings </h1>
+<h2> Settings </h2>
 
 <br/>
 
 <table>
 	<tr>
-		<th>Time to Trigger URL</th>
-		<th>URL Preference</th>
+		<th>   Trigger Time</th>
+		<th>URL</th>
 
 	</tr>
 
@@ -26,7 +28,9 @@ This is the scores average :  <%# @af_avg %>
 			<td><%= trig.timepref %></td>
 			<td><%= trig.urlpref %></td>
 			<th></th>
-			
+			<th></th>
+			<th></th>
+			<th></th>
 			<td> <%= button_to "Edit", { action: "edit", id: trig.id}, {method: :get, :class => "button"} %> </td>
 			<td> <%# button_to "E", { action: "update", id: trig.id}, {method: :edit, data:{confirm: "Are you damned sure???"}, :class => "button"} %> </td>
 			<td> <%= button_to "Delete", { action: "destroy", id: trig.id}, {method: :delete, data:{confirm: "Are you sure???"}, :class => "button"} %> </td>
@@ -75,5 +79,7 @@ setTimeout(function() { location.href=location.href;}, 20000 ); -->
 
 
 
+
+<!-- </div> -->
 
 </div>

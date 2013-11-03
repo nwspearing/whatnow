@@ -1,5 +1,9 @@
+<div id="container">
 
-	<h1> Log in using an email and password: </h1>
+<!-- </br>
+</br> -->
+
+	<h2> Log in: </h2>
 
 
 <%= form_for @user, {url:"/authentications", method:"post"} do |usr| %>
@@ -33,6 +37,6 @@
 <%end%>
 
 
-User id: <%= session[:user_id] %>
+<!-- User id: <%# session[:user_id] %> -->
 
-
+</div>
